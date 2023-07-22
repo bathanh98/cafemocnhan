@@ -551,11 +551,11 @@
           <p>Đặt hàng</p>
         </div>
 
-        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up"
+        <form action="https://script.google.com/macros/s/AKfycbz3QQcp1g8sFGIyATC78Lv352fFK-R41kASuiuGYgtxQnNQValKJE1qU73qcy3VJWTe/exec" method="post" role="form" class="php-email-form" data-aos="fade-up"
           data-aos-delay="100">
           <div class="row">
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Tên của bạn"
+              <input type="text" name="name" required class="form-control" id="name" placeholder="Tên của bạn"
                 data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
@@ -565,7 +565,7 @@
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
-              <input type="text" class="form-control" name="phone" id="phone" placeholder="Số điện thoại"
+              <input type="text" class="form-control" required name="phone" id="phone" placeholder="Số điện thoại"
                 data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
@@ -573,19 +573,23 @@
             <div class="col-lg-4 col-md-6 form-group mt-3">
               <select name="userType" class="form-control" id="userType">
                 <option value="">--Bạn là ai?--</option>
-                <option value="CaNhan">Cá nhân</option>
-                <option value="adminCafe">Chủ quán Cafe</option>
-                <option value="Shop">Cửa hàng</option>
+                <option value="Cá nhân">Cá nhân</option>
+                <option value="Chủ quán Cafe">Chủ quán Cafe</option>
+                <option value="Cửa hàng">Cửa hàng</option>
               </select>
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
-              <input type="text" class="form-control" name="productName" id="productName" placeholder="Tên sản phẩm"
-                data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <select name="productName" class="form-control" id="productName">
+                  <option value="">--Chọn sản phẩm?--</option>
+                  <option value="Cafe trộn pha phin">Cafe trộn pha phin</option>
+                  <option value="Cafe nguyên chất">Cafe nguyên chất</option>
+                  <option value="Mua sỉ">Mua sỉ</option>
+                </select>
               <div class="validate"></div>
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
-              <input type="number" class="form-control" name="quantity" id="quantity" placeholder="Số lượng"
+              <input type="number" class="form-control" required name="quantity" id="quantity" placeholder="Số lượng"
                 data-rule="minlen:1" data-msg="Please enter at least 1 chars">
               <div class="validate"></div>
             </div>
@@ -715,64 +719,64 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              <a href="assets/img/don-hang/hat-cafe.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/don-hang/hat-cafe.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              <a href="assets/img/don-hang/cafe-phin.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/don-hang/cafe-phin.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              <a href="assets/img/don-hang/cafe-goi.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/don-hang/cafe-goi.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              <a href="assets/img/don-hang/cafe-goi-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/don-hang/cafe-goi-2.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              <a href="assets/img/don-hang/cafe-sua.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/don-hang/cafe-sua.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              <a href="assets/img/don-hang/cafe-sua-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/don-hang/cafe-sua-2.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              <a href="assets/img/don-hang/don-hang-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/don-hang/don-hang-1.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              <a href="assets/img/don-hang/don-hang-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/don-hang/don-hang-2.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
