@@ -5,7 +5,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -117,7 +117,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -126,7 +126,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -136,7 +136,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -185,9 +185,9 @@
 
       let menuFilters = select('#menu-flters li', true);
 
-      on('click', '#menu-flters li', function(e) {
+      on('click', '#menu-flters li', function (e) {
         e.preventDefault();
-        menuFilters.forEach(function(el) {
+        menuFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -195,7 +195,7 @@
         menuIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        menuIsotope.on('arrangeComplete', function() {
+        menuIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -274,5 +274,26 @@
       once: true,
       mirror: false
     })
+  });
+  const form = document.getElementById('form-order');
+  const formData = new FormData(form);
+  form.addEventListener('submit', function (event) {
+    // Ngăn chặn hành vi mặc định của form (refresh trang)
+    event.preventDefault();
+    fetch('https://script.google.com/macros/s/AKfycbyX2JUdF1mS-eWxQv4OAsFwdMZ6cPwDDo3iR0HWjyo/dev', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => {
+        if (response.ok) {
+          // Nếu thành công, thực hiện các hành động khác ở đây
+          console.log('Dữ liệu đã được gửi thành công!');
+        } else {
+          console.error('Lỗi khi gửi dữ liệu form.');
+        }
+      })
+      .catch(error => {
+        console.error('Đã xảy ra lỗi:', error);
+      });
   });
 })()
