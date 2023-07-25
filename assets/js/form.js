@@ -8,7 +8,6 @@ function onSubmitForm(event) {
     })
         .then(response => {
             if (response.ok) {
-                // Nếu thành công, thực hiện các hành động khác ở đây
                 alert('Dữ liệu đã được gửi thành công!');
                 form.reset();
                 document.documentElement.scrollTop = 0;
