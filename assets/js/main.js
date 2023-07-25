@@ -113,7 +113,6 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
-
   /**
    * Mobile nav toggle
    */
@@ -274,26 +273,5 @@
       once: true,
       mirror: false
     })
-  });
-  const form = document.getElementById('form-order');
-  const formData = new FormData(form);
-  form.addEventListener('submit', function (event) {
-    // Ngăn chặn hành vi mặc định của form (refresh trang)
-    event.preventDefault();
-    fetch('https://script.google.com/macros/s/AKfycbyX2JUdF1mS-eWxQv4OAsFwdMZ6cPwDDo3iR0HWjyo/dev', {
-      method: 'POST',
-      body: formData
-    })
-      .then(response => {
-        if (response.ok) {
-          // Nếu thành công, thực hiện các hành động khác ở đây
-          console.log('Dữ liệu đã được gửi thành công!');
-        } else {
-          console.error('Lỗi khi gửi dữ liệu form.');
-        }
-      })
-      .catch(error => {
-        console.error('Đã xảy ra lỗi:', error);
-      });
   });
 })()
